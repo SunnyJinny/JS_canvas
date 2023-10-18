@@ -1,2 +1,3 @@
-# JavaScript_canvas
-(exercise) Meme Maker with nomadcoders 
+# JavaScript_Exercises
+Meme Maker with canvas
+from nomadcoders online lectures
