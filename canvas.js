@@ -4,8 +4,8 @@ const ctx = canvas.getContext("2d");
 // 자주 사용하기 때문에, context 대신에 짧은 변수명 ctx으로 사용
 
 // css에 canvas size를 설정한 뒤에, js에도 알려줘야해.
-canvas.width = 1000;
-canvas.height = 1000;
+canvas.width = 800;
+canvas.height = 800;
 // canvas의 좌표시스템
 // (0,0) > x
 //   V y

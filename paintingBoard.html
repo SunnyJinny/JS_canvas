@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="navigation">
-      <h1>Meme Maker</h1>
-      <a href="canvas.html">1. Canvas API</a>
-      <a href="paintingBoard.html">2. Painting Board</a>
-    </div>
-    <div class="container">
-      <div class="color-options">
+    <h1>2. Painting Board</h1>
+    <a href="index.html">Meme Maker</a>
+    <a href="canvas.html">1. Canvas API</a>
+    <canvas></canvas>
+    <!-- Attribute -->
+    <!-- 1. line Width를 변경 -->
+    <div class="wrapper">
+      <input
+        id="line-width"
+        type="range"
+        min="1"
+        max="10"
+        value="5"
+        step="0.5"
+      />
+      <!-- 2. line color를 변경: picker or select -->
+      <div class="wrapper-color">
         <input type="color" id="color" />
         <div
           class="color-option"
@@ -66,29 +76,12 @@
           data-color="#95a5a6"
         ></div>
       </div>
-      <canvas></canvas>
-      <div class="btns">
-        <input
-          id="line-width"
-          type="range"
-          min="1"
-          max="10"
-          value="5"
-          step="0.5"
-        />
-        <button id="mode-btn">🎨 To fill</button>
-        <button id="destroy-btn">💥 Destroy</button>
-        <button id="eraser-btn">🧽 Eraser</button>
-        <!-- Add Image: accept(video는 안되) multiple(여러개올릴수도 있어) -->
-        <!-- input file은 못생겼으니까 input의 id를 위한 label(for)을 만들면, 동일한 기능이 가능해진다.  -->
-        <label for="file">📸 Add Photo </label>
-        <input type="text" placeholder="Add text here... :)" id="text" />
-        <!-- Add Text -->
-        <input type="file" accept="image/*" id="file" />
-        <!-- Save -->
-        <button id="save">📥 Save Image</button>
-      </div>
+      <!-- 3. filling color 변경: fill mode & draw mode switch -->
+      <button id="mode-btn">to Fill</button>
+      <!-- 4. 지우기MODE: RESET or ERASER -->
+      <button id="destroy-btn">Destroy</button>
+      <button id=" ">Eraser</button>
     </div>
-    <script src="app.js"></script>
+    <script src="paintingBoard.js"></script>
   </body>
 </html>
